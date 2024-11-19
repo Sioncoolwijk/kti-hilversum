@@ -6,7 +6,7 @@ const Banner = () => {
       className="flex h-screen items-center max-h-[40rem] bg-cover bg-center"
       style={{ backgroundImage: `url(${stockwoman})` }}
     >
-      <div className="ml-36 center-align">
+      <div className="p-12">
         <h1 className="text-3xl font-semibold text-white">
           Welkom bij KTI Hilversum
         </h1>

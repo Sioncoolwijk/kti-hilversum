@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Hero from "./components/Hero";
 import Mogelijkheden from "./components/Mogelijkheden";
 import Uitleg from "./components/Uitleg";
+import Footer from "./components/Footer";
 // import { motion } from "framer-motion";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <Mogelijkheden />
       <Uitleg />
+      <Footer />
     </>
   );
 };

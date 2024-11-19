@@ -98,13 +98,13 @@ const Header = () => {
         </div>
 
         {/* Flex container to center text vertically */}
-        <div className="flex items-center justify-center mt-10">
+        <div className="flex items-center justify-center mt-6">
           <div className="">
             {navigation.map((item) => (
               <div key={item.id} className="mb-8">
                 <a
                   href={item.url}
-                  className="block p-5 text-lg font-semibold transition-colors hover:text-red text-center text-red"
+                  className="block p-1 text-lg font-semibold transition-colors hover:text-red text-center text-red"
                   onClick={() => setMenuOpen(false)} // Close the menu when an item is clicked
                 >
                   {item.title}

@@ -3,5 +3,17 @@ import stockwoman from "./stock-dental-woman.jpg";
 import logo from "./logo.svg";
 import stockteam from "./team.jpg";
 import teammember from "./teammember.jpg";
+import linkedin from "./socials/linkedin.svg";
+import instagram from "./socials/instagram.svg";
+import facebook from "./socials/facebook.svg";
 
-export { teammember, stockequipment, stockwoman, logo, stockteam };
+export {
+  teammember,
+  stockequipment,
+  stockwoman,
+  logo,
+  stockteam,
+  linkedin,
+  instagram,
+  facebook,
+};

@@ -1,5 +1,6 @@
 import { teamMembers } from "../constants";
 import Header from "./Header";
+import Footer from "./Footer";
 import { stockwoman } from "../assets";
 
 const Team = () => {
@@ -7,13 +8,13 @@ const Team = () => {
     <div>
       <Header />
       <div
-        className="flex h-[60vh] items-center justify-between px-8 bg-cover bg-center"
+        className="flex h-[60vh] items-center justify-between p-12 bg-cover bg-center"
         style={{ backgroundImage: `url(${stockwoman})` }}
       >
         <div className="w-[50vh] text-left text-white">
           <div className="text-lg bg-red bg-opacity-85 rounded-md p-6">
-            <h1 className="text-4xl font-semibold">Wie zijn wij</h1>
-            <p>
+            <h1 className="text-4xl font-semibold mb-4">Team KTI</h1>
+            <p className="text-sm font-serif">
               KTI Hilversum is een succesvolle tandartsenpraktijk in Hilversum.
               Wij werken volgens de nieuwste inzichten en combineren dat met een
               grote gastvrijheid, het team heet u van harte welkom. In onze
@@ -44,6 +45,7 @@ const Team = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

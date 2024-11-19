@@ -6,7 +6,7 @@ const Uitleg = () => {
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
           {/* Left Section */}
-          <div className="flex-1">
+          <div className="flex-1 p-6">
             <h2 className="text-4xl font-extrabold text-red mt-4 mb-6">
               Contact
             </h2>
@@ -28,7 +28,7 @@ const Uitleg = () => {
             </a>
           </div>
           {/* Right Section (optional image or additional content) */}
-          <div className="flex-1 hidden lg:block">
+          <div className="flex-1 hidden lg:block md:block">
             <img
               src={stockteam}
               alt="Dental practice"

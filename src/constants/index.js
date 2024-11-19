@@ -1,5 +1,6 @@
 import stockDentalImage from "../assets/dental-stock.jpg";
 import { teammember } from "../assets";
+import { linkedin, instagram, facebook } from "../assets";
 
 export const navigation = [
   {
@@ -77,7 +78,7 @@ export const teamMembers = [
     image: teammember,
   },
   {
-    name: "Angelique Schaafsma",
+    name: "Chloë Vieveen",
     role: "Mondhygiënist",
     image: teammember,
   },
@@ -102,11 +103,6 @@ export const teamMembers = [
     image: teammember,
   },
   {
-    name: "Liesbeth de Kort",
-    role: "Assistente",
-    image: teammember,
-  },
-  {
     name: "Davine Coolwijk",
     role: "Assistente",
     image: teammember,
@@ -120,5 +116,26 @@ export const teamMembers = [
     name: "Puck van Leur",
     role: "Assistente",
     image: teammember,
+  },
+];
+
+export const socials = [
+  {
+    id: "0",
+    title: "Linkedin",
+    iconUrl: linkedin,
+    url: "https://www.linkedin.com/",
+  },
+  {
+    id: "1",
+    title: "Facebook",
+    iconUrl: facebook,
+    url: "https://www.facebook.com/",
+  },
+  {
+    id: "2",
+    title: "Instagram",
+    iconUrl: instagram,
+    url: "https://www.instagram.com/",
   },
 ];
