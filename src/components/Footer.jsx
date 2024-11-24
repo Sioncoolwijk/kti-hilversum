@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-light bg-opacity-55 text-gray-dark">
       <div className="py-16 px-6">
-        <div className="max-w-screen-xl flex justify-around items-center space-y-8 md:space-y-0">
+        <div className="flex justify-around items-center space-y-8 md:space-y-0">
           {/* Logo Section */}
           <div className="hidden lg:block md:block">
             <a href="/" className="flex items-center space-x-4">
@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="max-w-[60vh] text-sm hidden lg:block">
+          <div className="max-w-[300px] text-sm hidden lg:block">
             Bij KTI Hilversum kunt u terecht voor diverse tandheelkundige zorg,
             uitgevoerd door ervaren specialisten. Ons doel is om hoogwaardige
             mondzorg te leveren in een toegankelijke omgeving, waar persoonlijke

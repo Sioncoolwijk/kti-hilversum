@@ -6,6 +6,7 @@ import teammember from "./teammember.jpg";
 import linkedin from "./socials/linkedin.svg";
 import instagram from "./socials/instagram.svg";
 import facebook from "./socials/facebook.svg";
+import route from "./route-kti-hilversum.pdf";
 
 import bord from "./buiten-bord.png";
 
@@ -19,4 +20,5 @@ export {
   instagram,
   facebook,
   bord,
+  route,
 };

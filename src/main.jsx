@@ -9,6 +9,7 @@ import Afspraak from "./components/Afspraak.jsx";
 import Routebeschrijving from "./components/Routebeschrijving.jsx";
 import Spoed from "./components/Spoed.jsx";
 import Openingstijden from "./components/Openingstijden.jsx";
+import Telefoon from "./components/Telefoon.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/openingstijden",
     element: <Openingstijden />,
+  },
+  {
+    path: "/telefoon",
+    element: <Telefoon />,
   },
 ]);
 

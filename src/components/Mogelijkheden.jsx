@@ -11,7 +11,7 @@ const Mogelijkheden = () => {
         title="Mogelijkheden"
       />
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
         {mogelijkheden.map((item) => (
           <a key={item.title} href={item.link}>
             <motion.div
@@ -39,7 +39,7 @@ const Mogelijkheden = () => {
               </motion.div>
             </motion.div>
           </a>
-      ))}
+        ))}
       </div>
     </section>
   );
