@@ -2,12 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Team from "./components/Team.jsx";
 
 import App from "./App.jsx";
+import Team from "./components/Team.jsx";
 import Afspraak from "./components/Afspraak.jsx";
 import Routebeschrijving from "./components/Routebeschrijving.jsx";
 import Spoed from "./components/Spoed.jsx";
+import Openingstijden from "./components/Openingstijden.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/spoed",
     element: <Spoed />,
+  },
+  {
+    path: "/openingstijden",
+    element: <Openingstijden />,
   },
 ]);
 

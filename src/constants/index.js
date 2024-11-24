@@ -29,10 +29,10 @@ export const navigation = [
     title: "Contact",
     url: "/contact",
     subItems: [
-      { id: "3-1", title: "Routebeschrijving", url: "/routebeschrijving" },
-      { id: "3-2", title: "Spoed", url: "/spoed" },
-      { id: "3-3", title: "Openingstijden", url: "/openingstijden" },
-      { id: "3-4", title: "Routebeschrijving", url: "/routebeschrijving" },
+      { id: "3-1", title: "Telefoon", url: "/telefoon" },
+      { id: "3-2", title: "Openingstijden", url: "/openingstijden" },
+      { id: "3-3", title: "Routebeschrijving", url: "/routebeschrijving" },
+      { id: "3-4", title: "Spoed", url: "/spoed" },
     ],
   },
 ];
