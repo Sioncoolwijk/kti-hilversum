@@ -49,8 +49,8 @@ const Header = () => {
             onMouseLeave={() => setHoveredItem(null)}
           >
             <a
-              href={item.url}
-              className="p-3 text-md font-semibold transition-colors hover:text-red"
+              // href={item.url}
+              className="p-3 text-md font-semibold transition-colors hover:text-red pointer-events-none"
             >
               {item.title}
             </a>
