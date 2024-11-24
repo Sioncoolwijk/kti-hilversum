@@ -66,7 +66,7 @@ const Bereikbaarheid = () => {
             <p>
               Bij aansluiting Hilversum (afslag 33) verlaat A27, verder op N201
               (richting Hilversum). Op N201 na 1330 meter links afslaan naar
-              Diependaalselaan (richting Arena Park-Zuid-Loosdrecht-'s
+              Diependaalselaan (richting Arena Park-Zuid-Loosdrecht-&apos;s
               Graveland). Op Diependaalselaan na 830 meter rotonde oprijden.
               Neem 3e afslag op rotonde richting Maartensdijk. Na ongeveer 200
               meter links zit de Kliniek.
