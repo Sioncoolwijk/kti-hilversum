@@ -6,7 +6,8 @@ import Team from "./components/Team.jsx";
 
 import App from "./App.jsx";
 import Afspraak from "./components/Afspraak.jsx";
-import Bereikbaarheid from "./components/Bereikbaarheid.jsx";
+import Routebeschrijving from "./components/Routebeschrijving.jsx";
+import Spoed from "./components/Spoed.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +38,12 @@ const router = createBrowserRouter([
     element: <Afspraak />,
   },
   {
-    path: "/bereikbaarheid",
-    element: <Bereikbaarheid />,
+    path: "/Routebeschrijving",
+    element: <Routebeschrijving />,
+  },
+  {
+    path: "/spoed",
+    element: <Spoed />,
   },
 ]);
 

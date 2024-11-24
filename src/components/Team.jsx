@@ -2,6 +2,7 @@ import { teamMembers } from "../constants";
 import Header from "./Header";
 import Footer from "./Footer";
 import { stockwoman } from "../assets";
+import { motion } from "framer-motion";
 
 const Team = () => {
   return (
@@ -11,18 +12,25 @@ const Team = () => {
         className="flex h-[60vh] items-center justify-between p-12 bg-cover bg-center"
         style={{ backgroundImage: `url(${stockwoman})` }}
       >
-        <div className="w-[50vh] text-left text-white">
-          <div className="text-lg bg-red bg-opacity-85 rounded-md p-6">
-            <h1 className="text-4xl font-semibold mb-4">Team KTI</h1>
-            <p className="text-sm font-serif">
-              KTI Hilversum is een succesvolle tandartsenpraktijk in Hilversum.
-              Wij werken volgens de nieuwste inzichten en combineren dat met een
-              grote gastvrijheid, het team heet u van harte welkom. In onze
-              kliniek wordt iedere patient door zijn/haar vaste tandarts
-              geholpen. Verder zijn wij een verwijspraktijk voor implantologie.
-            </p>
+        <motion.div
+          initial={{ y: "100vw" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 2, type: "spring", stiffness: 30 }}
+        >
+          <div className="w-[50vh] text-left text-white">
+            <div className="text-lg bg-red bg-opacity-85 rounded-md p-6">
+              <h1 className="text-4xl font-semibold mb-4">Team KTI</h1>
+              <p className="text-sm font-serif">
+                KTI Hilversum is een succesvolle tandartsenpraktijk in
+                Hilversum. Wij werken volgens de nieuwste inzichten en
+                combineren dat met een grote gastvrijheid, het team heet u van
+                harte welkom. In onze kliniek wordt iedere patient door
+                zijn/haar vaste tandarts geholpen. Verder zijn wij een
+                verwijspraktijk voor implantologie.
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <section className="px-8 py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">

@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <div className="py-14">
+    <div className="py-[3.9rem]">
       <div className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-3 shadow-md bg-white">
         {/* Logo */}
         <a href="/" className="flex items-center">

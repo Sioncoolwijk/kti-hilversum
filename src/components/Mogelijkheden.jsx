@@ -15,25 +15,31 @@ const Mogelijkheden = () => {
         {mogelijkheden.map((item) => (
           <a key={item.title} href={item.link}>
             <motion.div
-              className="flex flex-col items-start bg-white shadow-lg rounded-lg overflow-hidden"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
+              <motion.div
+                className="flex flex-col items-start bg-white shadow-lg rounded-lg overflow-hidden"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.2 }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
 
-              <div className="p-6 flex justify-between items-center w-full">
-                <h5 className="text-xl font-semibold text-gray-800 mb-2">
-                  {item.title}
-                </h5>
-                <IoIosArrowDown size={24} />
-              </div>
+                <div className="p-6 flex justify-between items-center w-full">
+                  <h5 className="text-xl font-semibold text-gray-800 mb-2">
+                    {item.title}
+                  </h5>
+                  <IoIosArrowDown size={24} />
+                </div>
+              </motion.div>
             </motion.div>
           </a>
-        ))}
+      ))}
       </div>
     </section>
   );
