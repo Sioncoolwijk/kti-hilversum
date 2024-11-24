@@ -66,6 +66,44 @@ export const mogelijkheden = [
   },
 ];
 
+export const vervoer = [
+  {
+    key: 0,
+    title: "Openbaar vervoer",
+    description: `Vanaf station Hilversum bus 58 (richting Zeist) nemen. 
+    
+    Uitstappen halte Plataanweg.
+
+    Vanaf hier is het nog 1 minuut lopen.
+    `,
+  },
+  {
+    key: 1,
+    title: "Auto vanuit Amsterdam",
+    description: `Op de A1 bij aansluiting Eemnes schuin rechts aanhouden naar A27 (richting Hilversum-Utrecht-Almere).
+
+      Op A1 na 1000 meter rechts aanhouden op A27 (richting Hilversum-Utrecht).
+
+      Zie verder *`,
+  },
+  {
+    key: 2,
+    title: "Auto vanuit Almere",
+    description: `A6 (richting Amsterdam-Hilversum).
+
+      Bij aansluiting Eemnes schuin rechts aanhouden naar A27 (richting Hilversum-Utrecht-Almere).
+
+      Zie verder *`,
+  },
+  {
+    key: 3,
+    title: "Auto vanuit Utrecht",
+    description: `A27 (richting Hilversum).
+
+    Zie verder *`,
+  },
+];
+
 export const teamMembers = [
   {
     name: "Harold van der Burg",

@@ -6,6 +6,7 @@ import Team from "./components/Team.jsx";
 
 import App from "./App.jsx";
 import Afspraak from "./components/Afspraak.jsx";
+import Bereikbaarheid from "./components/Bereikbaarheid.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/afspraak-maken",
     element: <Afspraak />,
+  },
+  {
+    path: "/bereikbaarheid",
+    element: <Bereikbaarheid />,
   },
 ]);
 

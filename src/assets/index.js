@@ -7,6 +7,8 @@ import linkedin from "./socials/linkedin.svg";
 import instagram from "./socials/instagram.svg";
 import facebook from "./socials/facebook.svg";
 
+import bord from "./buiten-bord.png";
+
 export {
   teammember,
   stockequipment,
@@ -16,4 +18,5 @@ export {
   linkedin,
   instagram,
   facebook,
+  bord,
 };
