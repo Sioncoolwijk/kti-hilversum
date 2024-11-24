@@ -15,7 +15,7 @@ const Routebeschrijving = () => {
           <img
             src={bord}
             alt="Route Sign"
-            className="max-w-full h-auto rounded-lg shadow-md grayscale"
+            className="max-w-full h-auto shadow-md grayscale"
           />
           <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black bg-opacity-50 p-4 rounded-lg">
             <h1 className="text-5xl font-bold">Routebeschrijving</h1>
