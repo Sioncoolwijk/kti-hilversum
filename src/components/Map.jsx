@@ -3,17 +3,17 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 // Fix for marker icon paths
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
-import markerShadowPng from "leaflet/dist/images/marker-shadow.png";
+import markerIconPng from "/red-marker.png";
 
 const Map = () => {
-  // Your address coordinates (latitude and longitude)
-  const position = [52.20795, 5.18187];
+  // Your address coordinates (latitude and longitude)1
+  const position = [52.207897, 5.1822];
 
   // Fix for marker icon in Leaflet
   const defaultIcon = L.icon({
     iconUrl: markerIconPng,
-    shadowUrl: markerShadowPng,
+    iconAnchor: [20, 40], // Set anchor to the bottom of the marker (half of the icon width and full height)
+    popupAnchor: [0, -40], // Popup should appear above the marker
   });
   L.Marker.prototype.options.icon = defaultIcon;
 
