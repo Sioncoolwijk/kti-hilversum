@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <div className="relative flex items-center justify-between px-6 py-3 shadow-md sticky top-0 z-50 bg-white">
+    <div className="flex items-center justify-between px-6 py-3 shadow-md sticky top-0 z-50 bg-white">
       {/* Logo */}
       <a href="/" className="flex items-center">
         <img
@@ -104,7 +104,7 @@ const Header = () => {
               <div key={item.id} className="mb-8">
                 <a
                   href={item.url}
-                  className="block p-1 text-lg font-semibold transition-colors hover:text-red text-center text-red"
+                  className="block p-2 text-lg font-semibold transition-colors hover:text-red text-center text-red"
                   onClick={() => setMenuOpen(false)} // Close the menu when an item is clicked
                 >
                   {item.title}
