@@ -11,9 +11,12 @@ const Spoed = () => {
         {/* Added flex-grow */}
         <div>
           <h1 className="text-red text-6xl font-bold my-6">Spoed</h1>
-          <p>
-            Voor eventuele spoedeisende hulp buiten praktijkuren kunt u bellen
-            met de Mondzorgpoli{" "}
+          <p className="font-serif text-lg">
+            Voor eventuele spoedeisende hulp buiten{" "}
+            <a className="text-red underline" href="/openingstijden">
+              praktijkuren
+            </a>{" "}
+            kunt u bellen met de Mondzorgpoli{" "}
             <a className="text-red underline" href="tel:0882632700">
               088-2632700
             </a>

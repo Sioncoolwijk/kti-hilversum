@@ -24,7 +24,7 @@ const Contact = () => {
               className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-200 hover:bg-opacity-50"
               href="/telefoon"
             >
-              neem contact op
+              contact opnemen
             </a>
           </div>
           {/* Right Section (optional image or additional content) */}

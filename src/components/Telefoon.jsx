@@ -46,7 +46,11 @@ const Telefoon = () => {
               </p>
 
               <p className="my-4">
-                Buiten deze tijden kunt u contact opnemen met de doktersdienst.
+                Buiten deze tijden kunt u contact opnemen met de{" "}
+                <a href="/spoed" className="text-red underline">
+                  doktersdienst
+                </a>
+                .
               </p>
             </motion.p>
           </div>
@@ -59,8 +63,8 @@ const Telefoon = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/logo.svg" // Example image URL
-              alt="Telefoon"
+              src="/logo.svg"
+              alt="Het logo van de Kliniek voor Tandheelkunde en Implantologie"
               className="w-full h-auto object-cover"
             />
           </motion.div>

@@ -12,7 +12,8 @@ export const navigation = [
       { id: "0-1", title: "Behandeling", url: "/behandeling" },
       { id: "0-2", title: "Preventie", url: "/preventie" },
       { id: "0-3", title: "Kwaliteit", url: "/kwaliteit" },
-      { id: "0-4", title: "Tarieven", url: "/tarieven" },
+      { id: "0-4", title: "Betaling", url: "/betaling" },
+      { id: "0-5", title: "Tarieven", url: "/tarieven" },
     ],
   },
   {

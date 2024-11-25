@@ -17,7 +17,7 @@ const Openingstijden = () => {
       <div className="flex-grow flex items-center justify-center p-6">
         <div>
           <h1 className="text-red text-6xl font-bold py-4">Openingstijden</h1>
-          <p className="py-6 font-serif">
+          <p className="py-6 font-serif text-lg">
             Door de weeks zijn wij elke dag geopend, op donderdag kunt u ook in
             de avond bij ons terecht.
           </p>
@@ -32,7 +32,7 @@ const Openingstijden = () => {
               },
             }}
             viewport={{ once: true }}
-            className="font-serif"
+            className="font-serif text-lg"
           >
             {hours.map((hour, index) => (
               <motion.li

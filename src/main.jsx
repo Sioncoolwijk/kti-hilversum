@@ -14,6 +14,7 @@ import Behandeling from "./components/Behandeling.jsx";
 import Preventie from "./components/Preventie.jsx";
 import Kwaliteit from "./components/Kwaliteit.jsx";
 import Tarieven from "./components/Tarieven.jsx";
+import Betaling from "./components/Betaling.jsx";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: "/tarieven",
     element: <Tarieven />,
+  },
+  {
+    path: "/betaling",
+    element: <Betaling />,
   },
 ]);
 

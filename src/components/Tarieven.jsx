@@ -10,12 +10,16 @@ const Preventie = () => {
       <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
         <div>
           <h1 className="text-red text-6xl font-bold my-6">Tarieven</h1>
-          <p className="whitespace-pre-line font-serif">{content}</p>
-          <p className="whitespace-pre-line font-serif my-4">
-            De tarieven voor 2024 zijn{" "}
-            <a className="text-red underline font-semibold">hier</a>{" "}
-            beschikbaar.
-          </p>
+          <div className="font-serif text-lg">
+            <p className="whitespace-pre-line">{content}</p>
+            <p className="whitespace-pre-line my-4">
+              Vragen over tarieven? Neem{" "}
+              <a href="/telefoon" className="text-red underline font-semibold">
+                contact
+              </a>{" "}
+              op met ons.
+            </p>
+          </div>
         </div>
       </div>
       <Footer />
