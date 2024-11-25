@@ -11,6 +11,7 @@ import Spoed from "./components/Spoed.jsx";
 import Openingstijden from "./components/Openingstijden.jsx";
 import Telefoon from "./components/Telefoon.jsx";
 import Behandeling from "./components/Behandeling.jsx";
+import Preventie from "./components/Preventie.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/behandeling",
     element: <Behandeling />,
+  },
+  {
+    path: "/preventie",
+    element: <Preventie />,
   },
 ]);
 

@@ -25,14 +25,15 @@ const Behandeling = () => {
       <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
         <div>
           <h1 className="text-red text-6xl font-bold my-6">Behandeling</h1>
-          <div className="font-serif" />
-          <p className="whitespace-pre-line">{content_one}</p>
-          <ul className="list-disc p-6">
-            {opties.map((optie, index) => (
-              <li key={index}>{optie.info}</li>
-            ))}
-          </ul>
-          <p className="whitespace-pre-line">{content_two}</p>
+          <div className="font-serif">
+            <p className="whitespace-pre-line">{content_one}</p>
+            <ul className="list-disc p-6">
+              {opties.map((optie, index) => (
+                <li key={index}>{optie.info}</li>
+              ))}
+            </ul>
+            <p className="whitespace-pre-line">{content_two}</p>
+          </div>
         </div>
       </div>
       <Footer />
