@@ -5,4 +5,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [react()],
+  build: {
+    commonjsOptions: {
+      transformMixedEsModules: true,
+      // include: [/linked-dep/, /node_modules/],
+    },
+  },
 });
