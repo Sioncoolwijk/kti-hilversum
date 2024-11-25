@@ -1,7 +1,6 @@
 import { stockteam } from "../assets";
-import { motion } from "framer-motion";
 
-const Uitleg = () => {
+const Contact = () => {
   return (
     <div className="bg-gray bg-opacity-10 py-24 px-4 sm:px-8 lg:px-16">
       <div className="max-w-screen-xl mx-auto">
@@ -23,7 +22,7 @@ const Uitleg = () => {
             </p>
             <a
               className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-500 hover:bg-opacity-50"
-              href="/contact"
+              href="/telefoon"
             >
               neem contact op
             </a>
@@ -42,4 +41,4 @@ const Uitleg = () => {
   );
 };
 
-export default Uitleg;
+export default Contact;

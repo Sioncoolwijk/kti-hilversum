@@ -13,6 +13,7 @@ import Telefoon from "./components/Telefoon.jsx";
 import Behandeling from "./components/Behandeling.jsx";
 import Preventie from "./components/Preventie.jsx";
 import Kwaliteit from "./components/Kwaliteit.jsx";
+import Tarieven from "./components/Tarieven.jsx";
 
 const router = createBrowserRouter([
   {
@@ -72,8 +73,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/tarieven",
-    element: <Tarieven />
-  }
+    element: <Tarieven />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(

@@ -17,7 +17,7 @@ const Openingstijden = () => {
       <div className="flex-grow flex items-center justify-center p-6">
         <div>
           <h1 className="text-red text-6xl font-bold py-4">Openingstijden</h1>
-          <p className="py-6">
+          <p className="py-6 font-serif">
             Door de weeks zijn wij elke dag geopend, op donderdag kunt u ook in
             de avond bij ons terecht.
           </p>
@@ -32,16 +32,17 @@ const Openingstijden = () => {
               },
             }}
             viewport={{ once: true }}
+            className="font-serif"
           >
             {hours.map((hour, index) => (
               <motion.li
                 key={index}
                 variants={{
-                  hidden: { x: -50, opacity: 0 },
+                  hidden: { x: -100, opacity: 0 },
                   visible: {
                     x: 0,
                     opacity: 1,
-                    transition: { type: "spring", stiffness: 100, damping: 10 },
+                    transition: { type: "spring", stiffness: 70, damping: 10 },
                   },
                 }}
                 className="my-2"

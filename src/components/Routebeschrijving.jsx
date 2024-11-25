@@ -91,6 +91,7 @@ const Routebeschrijving = () => {
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
+
         >
           <Map />
         </motion.div>

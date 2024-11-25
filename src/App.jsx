@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Hero from "./components/Hero";
 import Mogelijkheden from "./components/Mogelijkheden";
-import Uitleg from "./components/Uitleg";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Banner />
       <Hero />
       <Mogelijkheden />
-      <Uitleg />
+      <Contact />
       <Footer />
     </>
   );

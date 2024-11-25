@@ -29,7 +29,7 @@ const Telefoon = () => {
               animate={{ x: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: true }}
-              className="text-base md:text-lg"
+              className="text-base md:text-lg font-serif"
             >
               <p className="my-4">
                 Wij zijn maandag t/m vrijdag telefonisch bereikbaar tot 12:30 op{" "}

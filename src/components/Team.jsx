@@ -35,8 +35,8 @@ const Team = () => {
       </div>
       <section className="px-8 py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-8">Ons Team</h2>
-          <p className="mb-8 text-lg text-gray-600">
+          <h1 className="text-red text-6xl font-bold">Ons team</h1>
+          <p className="my-8 text-md font-serif mx-auto max-w-[800px]">
             Maak kennis met de mensen achter onze praktijk. Ons team bestaat uit
             gedreven professionals die samenwerken om de beste zorg te bieden.
             Ontdek wie wij zijn en hoe we elke dag werken aan de gezondheid en
@@ -68,7 +68,7 @@ const TeamMember = ({ name, role, image }) => (
       className="w-30 h-70 object-cover rounded-md mb-4"
     />
     <h4 className="text-xl font-semibold mb-2">{name}</h4>
-    <p className="text-md text-gray-500">{role}</p>
+    <p className="text-md font-serif">{role}</p>
   </div>
 );
 
