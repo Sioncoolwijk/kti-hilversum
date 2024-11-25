@@ -12,6 +12,7 @@ import Openingstijden from "./components/Openingstijden.jsx";
 import Telefoon from "./components/Telefoon.jsx";
 import Behandeling from "./components/Behandeling.jsx";
 import Preventie from "./components/Preventie.jsx";
+import Kwaliteit from "./components/Kwaliteit.jsx";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,14 @@ const router = createBrowserRouter([
     path: "/preventie",
     element: <Preventie />,
   },
+  {
+    path: "/kwaliteit",
+    element: <Kwaliteit />,
+  },
+  {
+    path: "/tarieven",
+    element: <Tarieven />
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
