@@ -31,7 +31,7 @@ const Contact = () => {
           <div className="flex-1 hidden lg:block md:block">
             <img
               src={stockteam}
-              alt="Dental practice"
+              alt="Foto van het gehele team van Kliniek voor Tandheelkunde en Implantologie"
               className="w-full h-auto rounded-lg shadow-md object-cover"
             />
           </div>

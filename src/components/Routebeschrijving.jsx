@@ -14,7 +14,7 @@ const Routebeschrijving = () => {
         <div className="relative">
           <img
             src={bord}
-            alt="Route Sign"
+            alt="Bord van KTI aan de rand van de straat"
             className="max-w-full h-auto shadow-md bg-cover bg-center"
           />
           <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-opacity-50 p-4 rounded-lg">
@@ -91,7 +91,6 @@ const Routebeschrijving = () => {
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-
         >
           <Map />
         </motion.div>

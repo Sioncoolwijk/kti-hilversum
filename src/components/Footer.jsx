@@ -11,7 +11,7 @@ const Footer = () => {
             <a href="/" className="flex items-center space-x-4">
               <img
                 src={logo}
-                alt="KTI Hilversum Logo"
+                alt="Kliniek voor Tandheelkunde en Implantologie (KTI) Hilversum Logo"
                 className="object-contain"
                 width={100}
               />

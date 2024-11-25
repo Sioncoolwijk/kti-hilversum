@@ -21,7 +21,7 @@ const Header = () => {
       <a href="/" className="flex items-center">
         <img
           src={logo}
-          alt="KTI Hilversum Logo"
+          alt="Kliniek voor Tandheelkunde en Implantologie (KTI) Hilversum Logo"
           className="object-contain"
           width={100}
         />
@@ -84,7 +84,7 @@ const Header = () => {
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              alt="KTI Hilversum Logo"
+              alt="Kliniek voor Tandheelkunde en Implantologie (KTI) Hilversum Logo"
               className="object-contain"
               width={100}
             />
