@@ -7,6 +7,7 @@ const Banner = () => {
       initial={{ x: "-100vw" }}
       animate={{ x: 0 }}
       transition={{ duration: 2, type: "spring", stiffness: 30 }}
+      viewport={{ once: true }}
     >
       <div
         className="flex h-screen items-center max-h-[40rem] bg-cover bg-center"

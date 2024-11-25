@@ -10,37 +10,45 @@ const Routebeschrijving = () => {
   return (
     <>
       <Header />
-      <div>
+      <div className="bg-gray-light bg-opacity-10">
         <div className="relative">
           <img
             src={bord}
             alt="Route Sign"
-            className="max-w-full h-auto shadow-md grayscale"
+            className="max-w-full h-auto shadow-md bg-cover bg-center"
           />
-          <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black bg-opacity-50 p-4 rounded-lg">
+          <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-opacity-50 p-4 rounded-lg">
             <h1 className="text-5xl font-bold">Routebeschrijving</h1>
           </div>
         </div>
-
         {/* Content Section */}
-        <main className="flex-grow p-10 m-[3rem]">
+        <div className="flex-grow p-6 sm:p-1 m-[3rem]">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {vervoer.map((item) => (
               <div
                 key={item.key}
-                className="rounded-lg shadow-md p-6 transform hover:shadow-lg"
+                className="rounded-lg shadow-md p-6 transform hover:shadow-lg bg-white flex flex-col font-serif"
               >
                 <h2 className="text-lg font-semibold text-red">{item.title}</h2>
-                <p className="text-gray-dark whitespace-pre-line">
+                <p className="text-gray-dark whitespace-pre-line mb-4">
                   {item.description}
                 </p>
+
+                <div className="mt-auto">
+                  {item.verder && (
+                    <div className="text-red font-serif">
+                      Zie verder vervolg *
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
 
-          <div>
-            <div className="flex-grow mx-auto rounded-lg shadow-md p-6 mt-2 transform hover:shadow-lg ">
-              <h1 className="text-red text-lg font-bold">
+          {/* Vervolg Section */}
+          <div className="max-w-4xl mx-auto mt-8">
+            <div className="rounded-lg shadow-md p-6 transform hover:shadow-lg bg-white font-serif">
+              <h1 className="text-red text-lg font-semibold">
                 Vervolg * voor alle richtingen
               </h1>
               <p>
@@ -53,7 +61,9 @@ const Routebeschrijving = () => {
               </p>
             </div>
           </div>
-          <div className="mt-12">
+
+          {/* Download and Plan Route Buttons */}
+          <div className="mt-12 flex justify-center">
             <a
               className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-500 hover:bg-opacity-50"
               href={route}
@@ -64,28 +74,29 @@ const Routebeschrijving = () => {
               download routebeschrijving
             </a>
           </div>
-          <div className="mt-8">
+          <div className="mt-6 flex justify-center">
             <a
               className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-500 hover:bg-opacity-50"
               href="https://www.google.nl/maps/dir//KTI-Hilversum+B.V.,+Utrechtseweg+79,+1213+TM+Hilversum/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Plan een route
+              Plan route met Google Maps
             </a>
           </div>
-        </main>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           <Map />
         </motion.div>
-
-        {/* Footer */}
-        <Footer />
       </div>
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

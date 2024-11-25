@@ -12,6 +12,7 @@ const Hero = () => {
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, type: "spring", stiffness: 30 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold">
               {hero_text.title}
@@ -24,6 +25,7 @@ const Hero = () => {
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, type: "spring", stiffness: 30 }}
+            viewport={{ once: true }}
           >
             <img
               src={stockequipment}

@@ -31,6 +31,7 @@ const Openingstijden = () => {
                 transition: { staggerChildren: 0.2 }, // Adds staggered delay between items
               },
             }}
+            viewport={{ once: true }}
           >
             {hours.map((hour, index) => (
               <motion.li

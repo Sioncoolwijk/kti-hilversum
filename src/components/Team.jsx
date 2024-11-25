@@ -13,9 +13,10 @@ const Team = () => {
         style={{ backgroundImage: `url(${stockwoman})` }}
       >
         <motion.div
-          initial={{ y: "100vw" }}
+          initial={{ y: "50rem" }}
           animate={{ y: 0 }}
-          transition={{ duration: 2, type: "spring", stiffness: 30 }}
+          transition={{ duration: 1, type: "spring", stiffness: 55 }}
+          viewport={{ once: true }}
         >
           <div className="w-[50vh] text-left text-white">
             <div className="text-lg bg-red bg-opacity-85 rounded-md p-6">

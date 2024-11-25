@@ -76,31 +76,29 @@ export const vervoer = [
 
     Vanaf hier is het nog 1 minuut lopen.
     `,
+    verder: false,
   },
   {
     key: 1,
     title: "Auto vanuit Amsterdam",
     description: `Op de A1 bij aansluiting Eemnes schuin rechts aanhouden naar A27 (richting Hilversum-Utrecht-Almere).
 
-      Op A1 na 1000 meter rechts aanhouden op A27 (richting Hilversum-Utrecht).
-
-      Zie verder *`,
+      Op A1 na 1000 meter rechts aanhouden op A27 (richting Hilversum-Utrecht).`,
+    verder: true,
   },
   {
     key: 2,
     title: "Auto vanuit Almere",
     description: `A6 (richting Amsterdam-Hilversum).
 
-      Bij aansluiting Eemnes schuin rechts aanhouden naar A27 (richting Hilversum-Utrecht-Almere).
-
-      Zie verder *`,
+      Bij aansluiting Eemnes schuin rechts aanhouden naar A27 (richting Hilversum-Utrecht-Almere).`,
+    verder: true,
   },
   {
     key: 3,
     title: "Auto vanuit Utrecht",
-    description: `A27 (richting Hilversum).
-
-    Zie verder *`,
+    description: `A27 (richting Hilversum).`,
+    verder: true,
   },
 ];
 

@@ -18,11 +18,13 @@ const Mogelijkheden = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
+              viewport={{ once: true }}
             >
               <motion.div
                 className="flex flex-col items-start bg-white shadow-lg rounded-lg overflow-hidden"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.2 }}
+                viewport={{ once: true }}
               >
                 <img
                   src={item.image}
