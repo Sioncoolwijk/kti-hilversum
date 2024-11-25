@@ -12,11 +12,16 @@ const Routebeschrijving = () => {
       <Header />
       <div className="bg-gray-light bg-opacity-10">
         <div className="relative">
-          <img
-            src={bord}
-            alt="Bord van KTI aan de rand van de straat"
-            className="max-w-full h-auto shadow-md bg-cover bg-center"
-          />
+          <div className="relative w-full h-[400px]">
+            <img
+              src={bord}
+              alt="Bord van KTI aan de rand van de straat"
+              className="absolute inset-0 w-full h-full object-cover shadow-md"
+            />
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-opacity-50 p-4 rounded-lg">
+              <h1 className="text-5xl font-bold">Routebeschrijving</h1>
+            </div>
+          </div>
           <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-opacity-50 p-4 rounded-lg">
             <h1 className="text-5xl font-bold">Routebeschrijving</h1>
           </div>
@@ -65,7 +70,7 @@ const Routebeschrijving = () => {
           {/* Download and Plan Route Buttons */}
           <div className="mt-12 flex justify-center">
             <a
-              className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-500 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-200 hover:bg-opacity-50"
               href={route}
               download="routebeschrijving-kti.pdf"
               target="_blank"
@@ -76,7 +81,7 @@ const Routebeschrijving = () => {
           </div>
           <div className="mt-6 flex justify-center">
             <a
-              className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-500 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 uppercase transition-colors duration-200 hover:bg-opacity-50"
               href="https://www.google.nl/maps/dir//KTI-Hilversum+B.V.,+Utrechtseweg+79,+1213+TM+Hilversum/"
               target="_blank"
               rel="noopener noreferrer"

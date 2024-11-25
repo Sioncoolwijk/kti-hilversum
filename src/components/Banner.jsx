@@ -22,7 +22,7 @@ const Banner = () => {
           </p>
           <div className="mt-[2rem]">
             <a
-              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-500 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-200 hover:bg-opacity-50"
               href="/afspraak-maken"
             >
               afspraak maken

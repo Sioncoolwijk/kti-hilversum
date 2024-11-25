@@ -21,7 +21,7 @@ const Contact = () => {
               geholpen. Verder zijn wij een verwijspraktijk voor implantologie.
             </p>
             <a
-              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-500 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-200 hover:bg-opacity-50"
               href="/telefoon"
             >
               neem contact op
@@ -32,6 +32,7 @@ const Contact = () => {
             <img
               src={stockteam}
               alt="Foto van het gehele team van Kliniek voor Tandheelkunde en Implantologie"
+              loading="lazy"
               className="w-full h-auto rounded-lg shadow-md object-cover"
             />
           </div>
