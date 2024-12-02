@@ -21,7 +21,7 @@ const Contact = () => {
               geholpen. Verder zijn wij een verwijspraktijk voor implantologie.
             </p>
             <a
-              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-200 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
               href="/telefoon"
             >
               contact opnemen

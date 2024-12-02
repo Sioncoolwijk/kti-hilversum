@@ -49,21 +49,44 @@ export const mogelijkheden = [
     description:
       "Implantologie is de behandeling waarbij een kunstwortel in de kaak wordt geplaatst om een verloren tand of kies te vervangen. Deze methode biedt een duurzame en natuurlijke oplossing voor ontbrekende tanden. De behandeling wordt nauwkeurig uitgevoerd, zodat het implantaat stevig in de kaak vastzit en optimaal kan functioneren.",
     image: stockDentalImage,
-    link: "/",
+    links: [
+      {
+        href: "/verloop-behandeling-implantologie",
+        text: "U heeft een prothese, geen eigen tanden meer en komt in aamerking voor implantaten. Hoe verder?",
+      },
+      {
+        href: "/hoe-verloopt-de-behandeling",
+        text: "U heeft 1 of meerdere tanden of kiezen en komt in aanmerking voor implantaten. Hoe verder?",
+      },
+      {
+        href: "https://nvoi.nl/patienten/",
+        text: "Lees meer over erkende implantologen",
+        target: "_blank",
+      },
+    ],
   },
   {
     title: "Mondgezondheid",
     description:
       "Een goede mondgezondheid vormt de basis voor een stralende glimlach en voorkomt problemen zoals tandvleesontstekingen en gaatjes. Door regelmatige controles en professionele reinigingen kunnen problemen vroegtijdig worden opgespoord en aangepakt. Het behoud van een gezonde mond is essentieel voor zowel esthetiek als algehele gezondheid.",
     image: stockDentalImage,
-    link: "/",
+    links: [
+      {
+        href: "/afspraak-maken",
+        text: "Plan een mondgezondheidcontrole bij ons.",
+      },
+    ],
   },
   {
     title: "Endodontologie",
-    description:
-      "Een wortelkanaalbehandeling wordt in vaktermen een endodontische behandeling genoemd. Hierover worden vaak vervelende en pijnlijke verhalen verteld. Gelukkig is dit tegenwoordig bijna nooit meer terecht. Echter een wortelkanaalbehandeling is het laatste redmiddel voor een tand of kies en zal daardoor altijd zeer nauwkeurig uitgevoerd moeten worden.",
+    description: `Een wortelkanaalbehandeling wordt in vaktermen een endodontische behandeling genoemd. Hierover worden vaak vervelende en pijnlijke verhalen verteld. Gelukkig is dit tegenwoordig bijna nooit meer terecht. Echter een wortelkanaalbehandeling is het laatste redmiddel voor een tand of kies en zal daardoor altijd zeer nauwkeurig uitgevoerd moeten worden. Binnen onze kliniek hebben we de beschikking over de modernste hulpmiddelen.`,
     image: stockDentalImage,
-    link: "/",
+    links: [
+      {
+        href: "/afspraak-maken",
+        text: "Plan een afspraak bij ons.",
+      },
+    ],
   },
 ];
 

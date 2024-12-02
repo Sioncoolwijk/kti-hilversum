@@ -24,6 +24,8 @@ const Betaling = () => {
               Voor veelgestelde vragen met betrekking tot Infomedics kunt u{" "}
               <a
                 href="https://www.infomedics.nl/vraag-en-antwoord"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-red underline"
               >
                 hier

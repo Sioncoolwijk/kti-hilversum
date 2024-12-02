@@ -15,6 +15,8 @@ import Preventie from "./components/Preventie.jsx";
 import Kwaliteit from "./components/Kwaliteit.jsx";
 import Tarieven from "./components/Tarieven.jsx";
 import Betaling from "./components/Betaling.jsx";
+import VerloopBehandelingImplantologie from "./components/VerloopBehandelingImplantologie.jsx";
+import VerloopBehandeling from "./components/VerloopBehandeling.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
           <div className="text-2xl">Helaas bestaat deze pagina niet.</div>
           <div className="mt-6">
             <a
-              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-lighttransition-colors duration-200 hover:bg-opacity-50"
+              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
               href="/"
             >
               Ga terug
@@ -79,6 +81,14 @@ const router = createBrowserRouter([
   {
     path: "/betaling",
     element: <Betaling />,
+  },
+  {
+    path: "/verloop-behandeling-implantologie",
+    element: <VerloopBehandelingImplantologie />,
+  },
+  {
+    path: "/hoe-verloopt-de-behandeling",
+    element: <VerloopBehandeling />,
   },
 ]);
 

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "framer-motion": "^11.11.11",
     "jspdf": "^2.5.2",
     "leaflet": "^1.9.4",
@@ -19,7 +20,8 @@
     "react-just-parallax": "^3.1.16",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^7.0.1",
-    "react-scroll-parallax": "^3.4.5"
+    "react-scroll-parallax": "^3.4.5",
+    "scroll-lock": "^2.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
