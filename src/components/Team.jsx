@@ -48,7 +48,7 @@ const Team = () => {
                 key={index}
                 name={member.name}
                 role={member.role}
-                image={member.image}
+                // image={member.image}
               />
             ))}
           </div>
@@ -60,15 +60,15 @@ const Team = () => {
 };
 
 // Helper component to display each team member
-const TeamMember = ({ name, role, image }) => (
+const TeamMember = ({ name, role }) => (
   <div className="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-    <img
+    {/* <img
       src={image}
       alt={name}
       className="w-30 h-70 object-cover rounded-md mb-4"
-    />
-    <h4 className="text-xl font-semibold mb-2">{name}</h4>
-    <p className="text-md font-serif">{role}</p>
+    /> */}
+    <h4 className="text-md font-semibold mb-2">{name}</h4>
+    <p className="text-sm font-serif">{role}</p>
   </div>
 );
 
