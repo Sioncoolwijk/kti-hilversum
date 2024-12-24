@@ -14,7 +14,7 @@ const Hero = () => {
             transition={{ duration: 2, type: "spring", stiffness: 30 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {hero_text.title}
             </h2>
             <p className="leading-relaxed">{hero_text.description}</p>

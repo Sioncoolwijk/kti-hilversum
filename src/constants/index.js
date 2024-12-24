@@ -6,7 +6,6 @@ export const navigation = [
   {
     id: "0",
     title: "Informatie",
-    url: "/informatie",
     // Subitems for 'Behandelingen' section
     subItems: [
       { id: "0-1", title: "Behandeling", url: "/behandeling" },
@@ -19,7 +18,6 @@ export const navigation = [
   {
     id: "1",
     title: "Onze praktijk",
-    url: "/de-praktijk",
     subItems: [
       { id: "2-1", title: "Team", url: "/team" },
       { id: "2-2", title: "Afspraak maken", url: "/afspraak-maken" },
@@ -28,7 +26,6 @@ export const navigation = [
   {
     id: "2",
     title: "Contact",
-    url: "/contact",
     subItems: [
       { id: "3-1", title: "Telefoon", url: "/telefoon" },
       { id: "3-2", title: "Openingstijden", url: "/openingstijden" },

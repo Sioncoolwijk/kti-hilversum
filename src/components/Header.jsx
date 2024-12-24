@@ -48,10 +48,7 @@ const Header = () => {
             onMouseEnter={() => setHoveredItem(item.id)}
             onMouseLeave={() => setHoveredItem(null)}
           >
-            <a
-              // href={item.url}
-              className="p-3 text-md font-semibold transition-colors hover:text-red pointer-events-none"
-            >
+            <a className="p-3 text-md font-semibold transition-colors hover:text-red pointer-events-none">
               {item.title}
             </a>
 
@@ -102,13 +99,9 @@ const Header = () => {
           <div className="">
             {navigation.map((item) => (
               <div key={item.id} className="mb-8">
-                <a
-                  href={item.url}
-                  className="block p-2 text-lg font-semibold transition-colors hover:text-red text-center text-red"
-                  onClick={() => setMenuOpen(false)} // Close the menu when an item is clicked
-                >
+                <div className="block text-lg font-semibold transition-colors hover:text-red text-center text-red">
                   {item.title}
-                </a>
+                </div>
 
                 {/* Dropdown Menu for mobile (if the item has subitems) */}
                 {item.subItems && (
@@ -117,7 +110,7 @@ const Header = () => {
                       <a
                         key={subItem.id}
                         href={subItem.url}
-                        className="block p-2 text-lg hover:text-red text-center"
+                        className="block p-1 text-lg hover:text-red text-center"
                         onClick={() => setMenuOpen(false)} // Close the menu when a subitem is clicked
                       >
                         {subItem.title}
