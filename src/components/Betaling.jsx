@@ -6,35 +6,35 @@ const Betaling = () => {
   const content_two = `De betaling verloopt via Infomedics. U kunt bij Infomedics alle informatie opvragen.`;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
-        <div>
-          <h1 className="text-red text-6xl font-bold my-6">Betaling</h1>
-          <div className="font-serif text-lg">
-            <p className="whitespace-pre-line my-4">
-              {content_one} Aan elke code is een{" "}
-              <a href="/tarieven" className="text-red underline">
-                tarief
-              </a>{" "}
-              gekoppeld.
-            </p>
-            <p className="whitespace-pre-line">{content_two}</p>
-            <p className="whitespace-pre-line my-4">
-              Voor veelgestelde vragen met betrekking tot Infomedics kunt u{" "}
-              <a
-                href="https://www.infomedics.nl/vraag-en-antwoord"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red underline"
-              >
-                hier
-              </a>{" "}
-              terecht.
-            </p>
-          </div>
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen">
+        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
+          Betaling
+        </h1>
+        <div className="font-serif text-lg">
+          <p className="whitespace-pre-line my-4">
+            {content_one} Aan elke code is een{" "}
+            <a href="/tarieven" className="text-red underline font-semibold">
+              tarief
+            </a>{" "}
+            gekoppeld.
+          </p>
+          <p className="whitespace-pre-line">{content_two}</p>
+          <p className="whitespace-pre-line my-4">
+            Voor veelgestelde vragen met betrekking tot Infomedics kunt u{" "}
+            <a
+              href="https://www.infomedics.nl/vraag-en-antwoord"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red underline font-semibold"
+            >
+              hier
+            </a>{" "}
+            terecht.
+          </p>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

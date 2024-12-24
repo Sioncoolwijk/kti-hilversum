@@ -35,8 +35,8 @@ const Footer = () => {
             <p className="text-sm mt-2 mb-2">
               Telefonische bereikbaarheid: <br></br>ma t/m vr van 9.00-12.30.
             </p>
-            <p className="text-md">(t) (035) 62 61 200</p>
-            <p className="text-md">(m) info@kti-hilversum.nl</p>
+            <p className="text-md">035-6261200</p>
+            <p className="text-md">info@kti-hilversum.nl</p>
           </div>
         </div>
       </div>

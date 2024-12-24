@@ -4,11 +4,11 @@ import Footer from "./Footer";
 
 const Telefoon = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <div className="flex-grow">
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen">
         <motion.div
-          className="flex-grow mx-auto p-8 md:p-12 max-w-full md:max-w-[90vh] my-12 md:my-40 flex items-center justify-center"
+          className="flex-grow mx-auto max-w-full flex items-center justify-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -16,7 +16,7 @@ const Telefoon = () => {
         >
           <div className="w-full md:w-1/2 pr-6 mb-6 md:mb-0">
             <motion.h1
-              className="text-red text-4xl md:text-6xl font-bold my-6"
+              className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6"
               initial={{ x: -500 }}
               animate={{ x: 0 }}
               viewport={{ once: true }}
@@ -69,7 +69,7 @@ const Telefoon = () => {
             />
           </motion.div>
         </motion.div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

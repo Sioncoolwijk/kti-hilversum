@@ -3,14 +3,14 @@ import Footer from "./Footer";
 
 const VerloopBehandeling = () => {
   return (
-    <div className="flex flex-col min-h-screen font-serif">
+    <div>
       <Header />
-      <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
-        <div>
-          <h1 className="text-red font-bold text-5xl mt-6 my-6">
-            Verloop Behandeling
-          </h1>
-          <p className="whitespace-pre-line mt-6">
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen font-serif">
+        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
+          Verloop Behandeling
+        </h1>
+        <div className="text-lg">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">Bevestiging en recept</h2>
             Een week voordat de behandeling plaatsvindt, krijgt u van ons een
             brief waarin de afspraak wordt bevestigd. Hierin zitten ook een
@@ -20,7 +20,8 @@ const VerloopBehandeling = () => {
             Let op: als u twee bloedverdunners gebruikt moet in overleg met uw
             arts 5 dagen van tevoren stoppen.
           </p>
-          <p className="whitespace-pre-line mt-6">
+
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">
               Eerste behandelfase implanteren
             </h2>
@@ -56,27 +57,27 @@ const VerloopBehandeling = () => {
             dragen!
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md t-6">De volgende dag</h2>
             De dag na de ingreep willen wij u graag terug zien. De wond wordt
             bekeken en eventueel een controle foto gemaakt.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md t-6">Hechtingen</h2>
             Na ongeveer 10 dagen worden de hechtingen verwijderd. Het is
             verstandig wanneer de hechtingen er nog in zitten deze plek zoveel
             mogelijk te ontzien met het eten.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Vastgroeien</h2>
             Nu komt er een rustperiode van ongeveer 8 weken. Het bot kan dan aan
             de implantaten vastgroeien. Het is in deze periode belangrijk om het
             implantaat niet te belasten.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">
               Tweede behandelfase implanteren
             </h2>
@@ -91,7 +92,7 @@ const VerloopBehandeling = () => {
             type.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Kroon of Brug</h2>
             Als de kroon of brug gemaakt wordt door uw eigen tandarts is het
             handig dat u hiervoor zelf een afspraak maakt. U kunt dan aangeven
@@ -103,7 +104,7 @@ const VerloopBehandeling = () => {
             naar uw eigen tandarts.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Controle</h2>
             Indien uw eigen tandarts de kroon of brug maakt zien wij u graag nog
             een keer terug om te kijken of alles goed functioneert en het
@@ -114,13 +115,15 @@ const VerloopBehandeling = () => {
             controle de afspraken bij ons gemaakt.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             Wij wensen u veel plezier en gemak van uw implantaat. Indien u nog
             vragen heeft kunt u altijd contact met ons opnemen.
           </p>
 
           <h2 className="text-black text-md my-6">
-            H. van der Burg<br></br>Tandarts-Implantoloog
+            H. van der Burg
+            <br />
+            Tandarts-Implantoloog
           </h2>
           <a
             className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
@@ -129,7 +132,7 @@ const VerloopBehandeling = () => {
             afspraak maken
           </a>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

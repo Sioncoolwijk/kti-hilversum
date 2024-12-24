@@ -3,14 +3,14 @@ import Footer from "./Footer";
 
 const VerloopBehandelingImplantologie = () => {
   return (
-    <div className="flex flex-col min-h-screen font-serif">
+    <div>
       <Header />
-      <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
-        <div>
-          <h1 className="text-red font-bold text-5xl mt-6 my-6">
-            Verloop Behandeling Implantologie
-          </h1>
-          <p className="whitespace-pre-line mt-6">
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen font-serif">
+        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
+          Verloop Behandeling Implantologie
+        </h1>
+        <div className="text-lg">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">Bevestiging en recept</h2>
             Een week voordat de behandeling plaatsvindt krijgt u van ons een
             brief waarin de afspraak wordt bevestigd. Hierin zitten ook een
@@ -18,7 +18,7 @@ const VerloopBehandelingImplantologie = () => {
             ophalen. Let op: als u twee bloedverdunners gebruikt moet in overleg
             met uw arts 5 dagen van tevoren stoppen.
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">Eerste behandelfase</h2>
             Het plaatsen van de implantaten gebeurt onder plaatselijke
             verdoving. Er wordt een sneetje van ongeveer 3 cm in de onderkaak
@@ -40,37 +40,37 @@ const VerloopBehandelingImplantologie = () => {
             worden de implantaten altijd van hogere dopjes voorzien.
           </p>
 
-          <p className="whitespace-pre-line mt-6">
-            <h2 className="text-black text-md t-6">De volgende dag</h2>
+          <p className="whitespace-pre-line my-4">
+            <h2 className="text-black text-md mt-6">De volgende dag</h2>
             De dag na de ingreep willen wij u graag terug zien. De wond wordt
             bekeken en eventueel een controle foto gemaakt.
           </p>
-          <p className="whitespace-pre-line mt-6">
-            <h2 className="text-black text-md t-6">Tandprotheticus</h2>
+          <p className="whitespace-pre-line my-4">
+            <h2 className="text-black text-md mt-6">Tandprotheticus</h2>
             Na de ingreep kunt u naar de tandprotheticus gaan die uw huidige
             prothese zal aanpassen. U kunt dan uw originele prothese weer dragen
             en u loopt dus niet zonder tanden, maar u mag er nog niet mee eten!
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Hechtingen</h2>
             Na ongeveer 10 dagen worden de hechtingen verwijderd. Het is
             verstandig wanneer de hechtingen er nog in zitten zacht voedsel te
             gebruiken.
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Vastgroeien</h2>
             Nu komt er een rustperiode van ongeveer 8 weken. Het bot kan dan aan
             de implantaten vastgroeien. Het is in deze periode belangrijk om de
             implantaten niet te belasten (dus in de nacht de prothese uit!).
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-red text-md mt-6">Tweede behandelfase</h2>
             Implantaten opzoeken Na de vastgroeiperiode worden de implantaten
             weer opgezocht. Als de implantaten onder het tandvlees zijn
             geplaatst wordt de kaak weer verdoofd en worden er 2 of 4 kleine
             sneetjes boven de implantaten gemaakt.
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">
               Tandprotheticus (fase 2)
             </h2>
@@ -78,7 +78,7 @@ const VerloopBehandelingImplantologie = () => {
             tevoren een afspraak hiervoor te maken zodat het vervolg vlot
             verloopt.
           </p>
-          <p className="whitespace-pre-line mt-6">
+          <p className="whitespace-pre-line my-4">
             <h2 className="text-black text-md mt-6">Controle</h2>
             Als alles klaar is zien wij u graag nog een keer terug om te
             controleren of de prothese goed functioneert en het onderhoud goed
@@ -89,7 +89,9 @@ const VerloopBehandelingImplantologie = () => {
           </p>
 
           <h2 className="text-black text-md my-6">
-            H. van der Burg<br></br>Tandarts-Implantoloog
+            H. van der Burg
+            <br />
+            Tandarts-Implantoloog
           </h2>
           <a
             className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
@@ -98,7 +100,7 @@ const VerloopBehandelingImplantologie = () => {
             afspraak maken
           </a>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

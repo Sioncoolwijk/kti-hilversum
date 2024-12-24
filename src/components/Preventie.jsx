@@ -7,14 +7,16 @@ const Preventie = () => {
   Wij sturen u bericht als het weer tijd is voor het periodieke mondonderzoek.`;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <div className="flex-grow flex items-center justify-center p-6 mx-[8rem] my-[3rem]">
-        <div>
-          <h1 className="text-red text-6xl font-bold my-6">Preventie</h1>
-          <p className="whitespace-pre-line font-serif">{content}</p>
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen">
+        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
+          Preventie
+        </h1>
+        <div className="font-serif text-lg">
+          <p className="whitespace-pre-line my-4">{content}</p>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

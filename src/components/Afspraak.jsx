@@ -7,42 +7,48 @@ const Afspraak = () => {
   const content_two = `Spoedbehandelingen voeren we zo veel mogelijk op dezelfde dag uit. Of we nemen noodmaatregelen zodat u pijnvrij bent tot de daadwerkelijke behandeling plaatsvindt.`;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <div className="flex-grow flex items-center justify-center p-6 mx-[8rem]">
-        <div>
-          <h1 className="text-red text-6xl font-bold my-8">Afspraak Maken</h1>
-          <h3 className="text-red text-2xl font-semibold">Standaard</h3>
-          <p className="font-serif text-lg">
-            <p className="whitespace-pre-line  mb-4">
-              {content_one} Bellen voor een afspraak kan tussen 9:00 en 12:30 op{" "}
-              <a href="tel:0356261200" className="text-red underline">
-                035-6261200
-              </a>
-              .
-            </p>
-            <p className="whitespace-pre-line  mb-7">
-              In overleg met u zorgen we ervoor dat de verschillende
-              behandelingen zo veel mogelijk op elkaar aansluiten.
-            </p>
-            <h3 className="text-red text-2xl font-semibold">Spoed</h3>
-            <p className="whitespace-pre-line  mb-4">
-              {content_two} In geval van pijnklachten zijn wij tussen 12:30 en
-              17:00 te bereiken op{" "}
-              <a href="tel:0356261202" className="text-red underline">
-                035-6261202
-              </a>
-            </p>
-            <p className="whitespace-pre-line ">
-              Voor eventuele spoedeisende hulp buiten praktijkuren kunt u bellen
-              met de Mondzorgpoli{" "}
-              <a href="tel:0882632700" className="text-red underline">
-                088-2632700
-              </a>
-            </p>
+      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen font-serif">
+        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-8">
+          Afspraak Maken
+        </h1>
+
+        <section className="text-lg">
+          <h3 className="text-red lg:text-2xl md:text-xl sm:text-lg font-semibold my-4">
+            Standaard
+          </h3>
+          <p className="whitespace-pre-line mb-4">
+            {content_one} Bellen voor een afspraak kan tussen 9:00 en 12:30 op{" "}
+            <a href="tel:0356261200" className="text-red underline">
+              035-6261200
+            </a>
+            .
           </p>
-        </div>
-      </div>
+          <p className="whitespace-pre-line mb-7">
+            In overleg met u zorgen we ervoor dat de verschillende behandelingen
+            zo veel mogelijk op elkaar aansluiten.
+          </p>
+
+          <h3 className="text-red lg:text-2xl md:text-xl sm:text-lg font-semibold my-4">
+            Spoed
+          </h3>
+          <p className="whitespace-pre-line mb-4">
+            {content_two} In geval van pijnklachten zijn wij tussen 12:30 en
+            17:00 te bereiken op{" "}
+            <a href="tel:0356261202" className="text-red underline">
+              035-6261202
+            </a>
+          </p>
+          <p className="whitespace-pre-line">
+            Voor eventuele spoedeisende hulp buiten praktijkuren kunt u bellen
+            met de Mondzorgpoli{" "}
+            <a href="tel:0882632700" className="text-red underline">
+              088-2632700
+            </a>
+          </p>
+        </section>
+      </main>
       <Footer />
     </div>
   );
