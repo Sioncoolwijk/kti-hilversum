@@ -30,7 +30,7 @@ const Hero = () => {
             <img
               src={stockequipment}
               alt="Tandartspraktijk"
-              className="w-full h-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+              className="w-full h-auto rounded-lg shadow-md transform transition-transform duration-300"
             />
           </motion.div>
         </div>
