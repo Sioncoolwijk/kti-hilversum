@@ -7,7 +7,7 @@ const Openingstijden = () => {
     { day: "Maandag", time: "8:30 - 17:00" },
     { day: "Dinsdag", time: "8:30 - 17:00" },
     { day: "Woensdag", time: "8:30 - 17:00" },
-    { day: "Donderdag", time: "8:30 - 20:30" },
+    { day: "Donderdag", time: "8:30 - 17:00" },
     { day: "Vrijdag", time: "8:30 - 14:00" },
   ];
 
@@ -19,8 +19,8 @@ const Openingstijden = () => {
           Openingstijden
         </h1>
         <p className="text-lg mb-8">
-          Door de weeks zijn wij elke dag geopend, op donderdag kunt u ook in de
-          avond bij ons terecht.
+          Wij zijn doordeweeks elke dag geopend. Op vrijdag sluit de praktijk
+          iets eerder.
         </p>
 
         <motion.ul
