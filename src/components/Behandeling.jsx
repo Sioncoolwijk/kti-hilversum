@@ -1,43 +1,148 @@
+import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
+import { 
+  ClipboardDocumentCheckIcon,
+  ClockIcon,
+  DocumentTextIcon,
+  ChevronRightIcon
+} from '@heroicons/react/24/outline';
+
+const ProcessStep = ({ number, title, description }) => (
+  <motion.div
+    initial={{ y: 20, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ delay: number * 0.1 }}
+    className="relative bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
+  >
+    <div className="absolute -left-4 -top-4 w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center font-bold">
+      {number}
+    </div>
+    <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+    <p className="text-gray-600 leading-relaxed">{description}</p>
+  </motion.div>
+);
+
+const InfoCard = ({ icon: Icon, title, children }) => (
+  <motion.div
+    initial={{ y: 20, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    className="flex items-start gap-4 bg-red-50/50 rounded-xl p-6"
+  >
+    <div className="p-3 bg-white rounded-xl shadow-sm">
+      <Icon className="w-6 h-6 text-red-600" />
+    </div>
+    <div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <div className="text-gray-600 leading-relaxed space-y-2">
+        {children}
+      </div>
+    </div>
+  </motion.div>
+);
 
 const Behandeling = () => {
-  const content_one = `Graag zien we u regelmatig voor een periodieke controle. Tijdens dit bezoek nemen we de dagelijkse mondverzorging met u door, zodat uw gebit en mond gezond blijven. Indien nodig ondernemen we actie om de mondhygiëne te verbeteren.
-  Indien er problemen in uw gebit worden geconstateerd, bespreekt de tandarts met u of extra behandeling nodig is. Ook vertelt de tandarts u over:
-  `;
-
-  const content_two = `Kleine ingrepen bespreken we direct met u en de behandeling volgt, indien nodig, op korte termijn. U kunt daarbij denken aan een eenvoudige gebitsreiniging of het plaatsen van een vulling. Bij uitgebreide behandelingen informeren wij u over de kosten. Desgewenst kan het behandelplan met de bijbehorende kosten schriftelijk worden vastgelegd. Wij doen dit in elk geval altijd voor behandelingen vanaf € 250,-. Na uw instemming voeren we de afgesproken behandeling uit. Dat kan over het algemeen binnen 30 werkdag(en).
-  
-  Bij betalen vindt u meer informatie over de kosten van behandelingen, facturatie en de betalingsmogelijkheden.
-
-  De informatie over uw gebit en de historie van de behandelingen slaan wij op in onze computer. Uiteraard is dit systeem goed beveiligd. Wij bewaren de gegevens minstens 15 jaar. Op uw (schriftelijk) verzoek kunnen we uw gegevens ook doorzenden naar een andere behandelaar.`;
-
-  const opties = [
-    { info: "de te verwachten resultaten" },
-    { info: "de risico's van een behandeling" },
-    { info: "het aantal behandelingen" },
-    { info: "en de duur van de behandelingen" },
+  const steps = [
+    {
+      title: "Eerste Controle",
+      description: "Tijdens dit bezoek nemen we de dagelijkse mondverzorging met u door en controleren we uw gebit."
+    },
+    {
+      title: "Behandelplan",
+      description: "Bij problemen bespreekt de tandarts met u de te verwachten resultaten, risico's, aantal en duur van de behandelingen."
+    },
+    {
+      title: "Uitvoering",
+      description: "Na uw instemming voeren we de afgesproken behandeling uit binnen 30 werkdagen."
+    }
   ];
 
   return (
-    <div>
-      <Header />
-      <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen">
-        <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
-          Behandeling
-        </h1>
-        <div className="font-serif text-lg">
-          <p className="whitespace-pre-line my-4">{content_one}</p>
-          <ul className="list-disc p-6 font-serif">
-            {opties.map((optie, index) => (
-              <li key={index}>{optie.info}</li>
+    <>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        <main className="max-w-6xl mx-auto px-6 py-12">
+          {/* Hero Section */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Behandeling
+              </h1>
+              <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
+              <p className="text-lg text-gray-600">
+                Van eerste controle tot behandeling, wij zorgen voor uw gebit
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Process Steps */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-red-100"></div>
+            
+            {steps.map((step, index) => (
+              <ProcessStep
+                key={index}
+                number={index + 1}
+                title={step.title}
+                description={step.description}
+              />
             ))}
-          </ul>
-          <p className="whitespace-pre-line my-4">{content_two}</p>
-        </div>
-      </main>
+          </div>
+
+          {/* Info Grid */}
+          <div className="grid lg:grid-cols-2 gap-6">
+            <InfoCard icon={ClipboardDocumentCheckIcon} title="Kleine Ingrepen">
+              <p>
+                Kleine ingrepen bespreken we direct met u en de behandeling volgt op korte termijn. 
+                Denk hierbij aan een eenvoudige gebitsreiniging of het plaatsen van een vulling.
+              </p>
+            </InfoCard>
+
+            <InfoCard icon={DocumentTextIcon} title="Uitgebreide Behandelingen">
+              <p>
+                Bij uitgebreide behandelingen informeren wij u over de kosten. Het behandelplan met 
+                bijbehorende kosten wordt schriftelijk vastgelegd voor behandelingen vanaf € 250,-.
+              </p>
+            </InfoCard>
+
+            <InfoCard icon={ClockIcon} title="Behandeltijd">
+              <p>
+                Na uw instemming voeren we de afgesproken behandeling uit. Dat kan over het algemeen 
+                binnen 30 werkdagen.
+              </p>
+            </InfoCard>
+
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-6 text-white flex items-center justify-between"
+            >
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Meer informatie nodig?</h3>
+                <p className="text-white/90">Bekijk onze tarieven en vergoedingen</p>
+              </div>
+              <a
+                href="/tarieven"
+                className="inline-flex items-center gap-2 bg-white text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition-colors duration-200"
+              >
+                <span>Tarieven</span>
+                <ChevronRightIcon className="w-4 h-4" />
+              </a>
+            </motion.div>
+          </div>
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -58,20 +58,20 @@ const Contact = () => {
               <ContactInfo
                 icon={IoLocationOutline}
                 title="Adres"
-                content="Koninginneweg 56, 1211 AT Hilversum"
-                link="https://maps.google.com/?q=Koninginneweg+56,+1211+AT+Hilversum"
+                content="Utrechtseweg 79 A, 1213 TM Hilversum"
+                link="https://maps.google.com/?q=Utrechtseweg+79A,+1213+TM+Hilversum"
               />
               <ContactInfo
                 icon={IoCallOutline}
                 title="Telefoon"
-                content="035 - 624 38 06"
-                link="tel:0356243806"
+                content="035-6261200"
+                link="tel:0356261200"
               />
               <ContactInfo
                 icon={IoMailOutline}
                 title="Email"
-                content="info@ktihilversum.nl"
-                link="mailto:info@ktihilversum.nl"
+                content="info@kti-hilversum.nl"
+                link="mailto:info@kti-hilversum.nl"
               />
             </div>
 
