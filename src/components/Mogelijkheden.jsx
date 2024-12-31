@@ -48,16 +48,17 @@ const Mogelijkheden = () => {
               viewport={{ once: true }}
             >
               <motion.div
-                className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-                whileHover={{ y: -8 }}
+                className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-200"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.2 }}
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-56 object-cover transition-transform duration-200 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </div>
 
                 <div className="p-6">
@@ -72,7 +73,7 @@ const Mogelijkheden = () => {
                     className="flex items-center text-red hover:text-red/80 transition-colors duration-200"
                   >
                     Lees meer
-                    <IoIosArrowDown className="ml-2 transform group-hover:rotate-180 transition-transform duration-300" />
+                    <IoIosArrowDown className="ml-2 transform transition-transform duration-200 group-hover:rotate-180" />
                   </button>
                 </div>
               </motion.div>

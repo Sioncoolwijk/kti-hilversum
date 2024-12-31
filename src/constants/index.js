@@ -45,7 +45,7 @@ export const mogelijkheden = [
     title: "Implantologie",
     description:
       "Implantologie is de behandeling waarbij een kunstwortel in de kaak wordt geplaatst om een verloren tand of kies te vervangen. Deze methode biedt een duurzame en natuurlijke oplossing voor ontbrekende tanden. De behandeling wordt nauwkeurig uitgevoerd, zodat het implantaat stevig in de kaak vastzit en optimaal kan functioneren.",
-    image: stockDentalImage,
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800",
     links: [
       {
         href: "/verloop-behandeling-implantologie",
@@ -57,7 +57,7 @@ export const mogelijkheden = [
       },
       {
         href: "https://nvoi.nl/patienten/",
-        text: "Lees meer over erkende implantologen",
+        text: "Lees meer over erkende implantologen (NVOI)",
         target: "_blank",
       },
     ],
@@ -77,7 +77,7 @@ export const mogelijkheden = [
   {
     title: "Endodontologie",
     description: `Een wortelkanaalbehandeling wordt in vaktermen een endodontische behandeling genoemd. Hierover worden vaak vervelende en pijnlijke verhalen verteld. Gelukkig is dit tegenwoordig bijna nooit meer terecht. Echter een wortelkanaalbehandeling is het laatste redmiddel voor een tand of kies en zal daardoor altijd zeer nauwkeurig uitgevoerd moeten worden. Binnen onze kliniek hebben we de beschikking over de modernste hulpmiddelen.`,
-    image: stockDentalImage,
+    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800",
     links: [
       {
         href: "/afspraak-maken",
