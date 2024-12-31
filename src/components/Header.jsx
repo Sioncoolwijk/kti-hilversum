@@ -120,17 +120,17 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-t border-gray-100 shadow-lg overflow-y-auto max-h-[calc(100vh-80px)]"
           >
-            <div className="max-w-7xl mx-auto py-4 px-6 space-y-6">
+            <div className="max-w-7xl mx-auto py-2 px-6 space-y-3">
               {navigation.map((item) => (
-                <div key={item.id} className="space-y-2">
+                <div key={item.id} className="space-y-1">
                   <div className="font-medium text-gray-900">{item.title}</div>
                   {item.subItems && (
-                    <div className="ml-4 space-y-2">
+                    <div className="ml-4 space-y-1">
                       {item.subItems.map((subItem) => (
                         <motion.a
                           key={subItem.id}
                           href={subItem.url}
-                          className="block py-2 text-gray-600 hover:text-red-600 transition-colors"
+                          className="block py-1 text-gray-600 hover:text-red-600 transition-colors"
                           onClick={() => setMenuOpen(false)}
                           whileHover={{ x: 4 }}
                         >
