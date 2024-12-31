@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
-import { mogelijkheden } from "../constants"; // Ensure your array contains the details for each modal
+import { mogelijkheden } from "../constants";
 import Heading from "./Heading";
 
 const Mogelijkheden = () => {
-  const [isOpen, setIsOpen] = useState(false); // Initially, modal is closed
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const openModal = (item) => {
@@ -20,88 +20,109 @@ const Mogelijkheden = () => {
   };
 
   return (
-    <section className="container mx-auto py-16 px-4 lg:px-8">
-      <Heading
-        className="text-center text-4xl font-bold mb-12"
-        title="Mogelijkheden"
-      />
-
-      <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
-        {mogelijkheden.map((item) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="flex flex-col items-start bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.2 }}
-              viewport={{ once: true }}
-              onClick={() => openModal(item)}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
-
-              <div className="p-6 flex justify-between items-center w-full">
-                <h5 className="text-xl font-semibold text-gray-800 mb-2">
-                  {item.title}
-                </h5>
-                <IoIosArrowDown size={24} />
-              </div>
-            </motion.div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Modal */}
-      {selectedItem && (
-        <Dialog
-          open={isOpen}
-          as="div"
-          className="relative z-40"
-          onClose={closeModal}
+    <section className="py-24 bg-gray-50" id="mogelijkheden">
+      <div className="container mx-auto px-6 md:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <div className="fixed inset-0 z-40 bg-black bg-opacity-50 flex justify-center items-center">
-            <DialogPanel className="w-full max-w-xl rounded-xl bg-white p-12 shadow-xl">
-              <DialogTitle as="h3" className="text-4xl text-red font-bold">
-                {selectedItem.title}
-              </DialogTitle>
+          <Heading
+            className="text-4xl md:text-5xl font-bold mb-6"
+            title="Mogelijkheden"
+          />
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Ontdek onze uitgebreide tandheelkundige diensten voor optimale mondzorg
+          </p>
+        </motion.div>
 
-              {/* Dynamic Content */}
-              <p className="mt-4 text-md">{selectedItem.description}</p>
-
-              {/* Links based on item */}
-              <ul className="list-disc p-4">
-                {selectedItem.links.map((link, index) => (
-                  <li key={index} className="mb-4">
-                    <a
-                      href={link.href}
-                      className="text-red underline"
-                      target={link.target || "_self"}
-                      rel="noopener noreferrer"
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
-                onClick={closeModal}
+        <div className="grid gap-8 md:grid-cols-3">
+          {mogelijkheden.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                whileHover={{ y: -8 }}
               >
-                Terug
-              </button>
-            </DialogPanel>
-          </div>
-        </Dialog>
-      )}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 line-clamp-2 mb-4">
+                    {item.description.substring(0, 100)}...
+                  </p>
+                  <button
+                    onClick={() => openModal(item)}
+                    className="flex items-center text-red hover:text-red/80 transition-colors duration-200"
+                  >
+                    Lees meer
+                    <IoIosArrowDown className="ml-2 transform group-hover:rotate-180 transition-transform duration-300" />
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Modal */}
+        {selectedItem && (
+          <Dialog
+            open={isOpen}
+            onClose={closeModal}
+            className="relative z-50"
+          >
+            <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" aria-hidden="true" />
+            <div className="fixed inset-0 flex items-center justify-center p-4">
+              <DialogPanel className="w-full max-w-2xl rounded-2xl bg-white p-8 md:p-12 shadow-2xl">
+                <DialogTitle as="h3" className="text-3xl font-bold text-red mb-6">
+                  {selectedItem.title}
+                </DialogTitle>
+                <div className="prose prose-lg">
+                  <p className="text-gray-600">{selectedItem.description}</p>
+                  <ul className="space-y-3 mt-6">
+                    {selectedItem.links.map((link, index) => (
+                      <li key={index}>
+                        <a
+                          href={link.href}
+                          className="text-red hover:text-red/80 underline-offset-4 hover:underline"
+                          target={link.target || "_self"}
+                          rel="noopener noreferrer"
+                        >
+                          {link.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-8">
+                  <button
+                    className="bg-red hover:bg-red/90 text-white rounded-full py-2 px-6 transition-colors duration-200"
+                    onClick={closeModal}
+                  >
+                    Sluiten
+                  </button>
+                </div>
+              </DialogPanel>
+            </div>
+          </Dialog>
+        )}
+      </div>
     </section>
   );
 };
