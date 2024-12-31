@@ -29,17 +29,21 @@ const router = createBrowserRouter([
     ),
     errorElement: (
       <Layout>
-        <div className="flex items-center justify-center h-screen w-screen text-center">
-          <div className="m-6 p-4">
-            <div className="text-2xl">Helaas bestaat deze pagina niet.</div>
-            <div className="mt-6">
-              <a
-                className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
-                href="/"
-              >
-                Ga terug
-              </a>
-            </div>
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-gray-50">
+          <div className="max-w-md mx-auto text-center px-4">
+            <h1 className="text-9xl font-bold text-red-600 mb-4">404</h1>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Oeps! Pagina niet gevonden
+            </h2>
+            <p className="text-gray-600 mb-8">
+              De pagina die u zoekt bestaat niet of is verplaatst.
+            </p>
+            <a
+              href="/"
+              className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              Terug naar de beginpagina
+            </a>
           </div>
         </div>
       </Layout>
