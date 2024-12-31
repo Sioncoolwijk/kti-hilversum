@@ -64,7 +64,6 @@ const Spoed = () => {
   return (
     <>
     <div className="min-h-screen bg-gray-100">
-      <Header />
       
       {/* Hero Section */}
       <motion.div
@@ -126,7 +125,7 @@ const Spoed = () => {
       </main>
       
     </div>
-      <Footer />
+      
     </>
   );
 };

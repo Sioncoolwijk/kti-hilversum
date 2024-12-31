@@ -29,7 +29,6 @@ const Tarieven = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        <Header />
         
         <main className="max-w-6xl mx-auto px-6 py-12">
           {/* Side-by-side Hero Section */}
@@ -103,7 +102,7 @@ const Tarieven = () => {
           </motion.div>
         </main>
       </div>
-      <Footer />
+      
     </>
   );
 };

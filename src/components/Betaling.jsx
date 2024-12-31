@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Header from "./Header";
 import Footer from "./Footer";
 import { 
   DocumentTextIcon, 
@@ -33,8 +32,6 @@ const Betaling = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
-        <Header />
-        
         <main className="max-w-6xl mx-auto px-6 py-12">
           {/* Top Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -107,7 +104,7 @@ const Betaling = () => {
           </motion.div>
         </main>
       </div>
-      <Footer />
+      
     </>
   );
 };

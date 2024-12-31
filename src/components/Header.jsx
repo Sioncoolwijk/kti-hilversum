@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { navigation } from "../constants";
 import { logo } from "../assets";
 import { IoClose } from "react-icons/io5";
@@ -6,124 +7,127 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(false); // State for toggling hamburger menu
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Prevent scroll when menu is open
-  if (menuOpen) {
-    // document.body.style.overflow = "hidden";
-  } else {
-    // document.body.style.overflow = "auto";
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="flex items-center justify-between px-6 py-3 shadow-md sticky top-0 z-50 bg-white">
-      {/* Logo */}
-      <a href="/" className="flex items-center">
-        <img
-          src={logo}
-          alt="Kliniek voor Tandheelkunde en Implantologie (KTI) Hilversum Logo"
-          className="object-contain"
-          width={100}
-        />
-        <h2 className="text-2xl whitespace-nowrap"></h2>
-      </a>
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: 0 }}
+      className={`fixed w-full top-0 z-40 transition-all duration-300 ${
+        scrolled 
+          ? "bg-white/80 backdrop-blur-md shadow-md" 
+          : "bg-white"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <motion.a 
+          href="/"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="flex items-center"
+        >
+          <img
+            src={logo}
+            alt="KTI Hilversum Logo"
+            className="object-contain w-[100px]"
+          />
+        </motion.a>
 
-      {/* Hamburger Icon */}
-      <div
-        className="md:hidden relative flex items-center justify-between px-6 py-3"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <button className="text-3xl">
-          {menuOpen ? <IoClose /> : <RxHamburgerMenu />}{" "}
-          {/* Display "X" when menu is open */}
-        </button>
-      </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-12 mr-12">
+          {navigation.map((item) => (
+            <div
+              key={item.id}
+              className="relative group"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <button className="p-2 text-gray-700 font-medium hover:text-red-600 transition-colors">
+                {item.title}
+              </button>
 
-      {/* Navigation items (Desktop and larger screens) */}
-      <div className="hidden md:flex space-x-16 mr-[6rem]">
-        {navigation.map((item) => (
-          <div
-            key={item.id}
-            className="relative"
-            onMouseEnter={() => setHoveredItem(item.id)}
-            onMouseLeave={() => setHoveredItem(null)}
-          >
-            <a className="p-3 text-md font-semibold transition-colors hover:text-red pointer-events-none">
-              {item.title}
-            </a>
-
-            {/* Dropdown Menu (if the item has subitems) */}
-            {item.subItems && hoveredItem === item.id && (
-              <div className="absolute left-0 w-48 bg-white shadow-lg rounded-md">
-                {item.subItems.map((subItem) => (
-                  <a
-                    key={subItem.id}
-                    href={subItem.url}
-                    className="block p-4 text-md hover:text-red"
+              {/* Dropdown Menu */}
+              <AnimatePresence>
+                {item.subItems && hoveredItem === item.id && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 w-56 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
                   >
-                    {subItem.title}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Mobile Menu (hamburger toggle) */}
-      <div
-        className={`md:hidden ${
-          menuOpen ? "block" : "hidden"
-        } absolute top-0 left-0 w-full h-screen bg-white shadow-lg z-50`}
-      >
-        <div className="relative flex items-center justify-between px-6 py-3 shadow-sm">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img
-              src={logo}
-              alt="Kliniek voor Tandheelkunde en Implantologie (KTI) Hilversum Logo"
-              className="object-contain"
-              width={100}
-            />
-            <h2 className="text-2xl whitespace-nowrap"></h2>
-          </a>
-          <div className="flex items-center justify-between px-10">
-            <button onClick={() => setMenuOpen(false)} className="text-3xl">
-              <IoClose />
-            </button>
-          </div>
-        </div>
-
-        {/* Flex container to center text vertically */}
-        <div className="flex items-center justify-center mt-6">
-          <div className="">
-            {navigation.map((item) => (
-              <div key={item.id} className="mb-8">
-                <div className="block text-lg font-semibold transition-colors hover:text-red text-center text-red">
-                  {item.title}
-                </div>
-
-                {/* Dropdown Menu for mobile (if the item has subitems) */}
-                {item.subItems && (
-                  <div>
                     {item.subItems.map((subItem) => (
-                      <a
+                      <motion.a
                         key={subItem.id}
                         href={subItem.url}
-                        className="block p-1 text-lg hover:text-red text-center"
-                        onClick={() => setMenuOpen(false)} // Close the menu when a subitem is clicked
+                        className="block px-4 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 transition-colors"
+                        whileHover={{ x: 4 }}
                       >
                         {subItem.title}
-                      </a>
+                      </motion.a>
                     ))}
-                  </div>
+                  </motion.div>
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
+              </AnimatePresence>
+            </div>
+          ))}
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-2xl text-gray-700 hover:text-red-600 transition-colors"
+        >
+          {menuOpen ? <IoClose /> : <RxHamburgerMenu />}
+        </motion.button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t border-gray-100 shadow-lg"
+          >
+            <div className="max-w-7xl mx-auto py-4 px-6 space-y-6">
+              {navigation.map((item) => (
+                <div key={item.id} className="space-y-2">
+                  <div className="font-medium text-gray-900">{item.title}</div>
+                  {item.subItems && (
+                    <div className="ml-4 space-y-2">
+                      {item.subItems.map((subItem) => (
+                        <motion.a
+                          key={subItem.id}
+                          href={subItem.url}
+                          className="block py-2 text-gray-600 hover:text-red-600 transition-colors"
+                          onClick={() => setMenuOpen(false)}
+                          whileHover={{ x: 4 }}
+                        >
+                          {subItem.title}
+                        </motion.a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

@@ -8,7 +8,6 @@ import { bord, route } from "../assets";
 const Routebeschrijving = () => {
   return (
     <>
-      <Header />
       
       {/* Hero Section with Parallax Effect */}
       <div className="relative h-[60vh] overflow-hidden">
@@ -132,7 +131,7 @@ const Routebeschrijving = () => {
         </motion.div>
       </div>
 
-      <Footer />
+      
     </>
   );
 };

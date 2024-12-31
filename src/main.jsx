@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout";
 
 import App from "./App.jsx";
 import Team from "./components/Team.jsx";
@@ -21,74 +22,132 @@ import VerloopBehandeling from "./components/VerloopBehandeling.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
     errorElement: (
-      <div className="flex items-center justify-center h-screen w-screen text-center">
-        <div className="m-6 p-4">
-          <div className="text-2xl">Helaas bestaat deze pagina niet.</div>
-          <div className="mt-6">
-            <a
-              className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
-              href="/"
-            >
-              Ga terug
-            </a>
+      <Layout>
+        <div className="flex items-center justify-center h-screen w-screen text-center">
+          <div className="m-6 p-4">
+            <div className="text-2xl">Helaas bestaat deze pagina niet.</div>
+            <div className="mt-6">
+              <a
+                className="bg-red text-white text-sm rounded-md p-2 px-6 uppercase font-light transition-colors duration-200 hover:bg-opacity-50"
+                href="/"
+              >
+                Ga terug
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </Layout>
     ),
   },
   {
     path: "/team",
-    element: <Team />,
+    element: (
+      <Layout>
+        <Team />
+      </Layout>
+    ),
   },
   {
     path: "/afspraak-maken",
-    element: <Afspraak />,
+    element: (
+      <Layout>
+        <Afspraak />
+      </Layout>
+    ),
   },
   {
     path: "/Routebeschrijving",
-    element: <Routebeschrijving />,
+    element: (
+      <Layout>
+        <Routebeschrijving />
+      </Layout>
+    ),
   },
   {
     path: "/spoed",
-    element: <Spoed />,
+    element: (
+      <Layout>
+        <Spoed />
+      </Layout>
+    ),
   },
   {
     path: "/openingstijden",
-    element: <Openingstijden />,
+    element: (
+      <Layout>
+        <Openingstijden />
+      </Layout>
+    ),
   },
   {
     path: "/telefoon",
-    element: <Telefoon />,
+    element: (
+      <Layout>
+        <Telefoon />
+      </Layout>
+    ),
   },
   {
     path: "/behandeling",
-    element: <Behandeling />,
+    element: (
+      <Layout>
+        <Behandeling />
+      </Layout>
+    ),
   },
   {
     path: "/preventie",
-    element: <Preventie />,
+    element: (
+      <Layout>
+        <Preventie />
+      </Layout>
+    ),
   },
   {
     path: "/kwaliteit",
-    element: <Kwaliteit />,
+    element: (
+      <Layout>
+        <Kwaliteit />
+      </Layout>
+    ),
   },
   {
     path: "/tarieven",
-    element: <Tarieven />,
+    element: (
+      <Layout>
+        <Tarieven />
+      </Layout>
+    ),
   },
   {
     path: "/betaling",
-    element: <Betaling />,
+    element: (
+      <Layout>
+        <Betaling />
+      </Layout>
+    ),
   },
   {
     path: "/verloop-behandeling-implantologie",
-    element: <VerloopBehandelingImplantologie />,
+    element: (
+      <Layout>
+        <VerloopBehandelingImplantologie />
+      </Layout>
+    ),
   },
   {
     path: "/hoe-verloopt-de-behandeling",
-    element: <VerloopBehandeling />,
+    element: (
+      <Layout>
+        <VerloopBehandeling />
+      </Layout>
+    ),
   },
 ]);
 

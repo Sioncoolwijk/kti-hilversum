@@ -5,7 +5,6 @@ import Footer from "./Footer";
 const Telefoon = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <main className="flex-1 container mx-auto px-4 py-16">
         <motion.div
           className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto"
@@ -89,7 +88,7 @@ const Telefoon = () => {
           </div>
         </motion.div>
       </main>
-      <Footer />
+      
     </div>
   );
 };

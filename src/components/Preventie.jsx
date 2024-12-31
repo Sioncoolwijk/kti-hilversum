@@ -60,7 +60,6 @@ const Preventie = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
-        <Header />
         
         <main className="max-w-6xl mx-auto px-6 py-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
@@ -134,7 +133,7 @@ const Preventie = () => {
           </div>
         </main>
       </div>
-      <Footer />
+      
     </>
   );
 };

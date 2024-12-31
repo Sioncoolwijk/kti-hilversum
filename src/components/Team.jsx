@@ -8,7 +8,6 @@ const Team = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
-        <Header />
         
         {/* Hero Section */}
         <motion.div
@@ -74,7 +73,7 @@ const Team = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      
     </>
   );
 };

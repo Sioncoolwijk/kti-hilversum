@@ -4,7 +4,6 @@ import Footer from "./Footer";
 const VerloopBehandeling = () => {
   return (
     <div>
-      <Header />
       <main className="px-6 py-12 mx-auto my-6 max-w-4xl min-h-screen font-serif">
         <h1 className="text-red lg:text-6xl md:text-5xl sm:text-4xl font-bold my-6">
           Verloop Behandeling
@@ -133,7 +132,7 @@ const VerloopBehandeling = () => {
           </a>
         </div>
       </main>
-      <Footer />
+      
     </div>
   );
 };
