@@ -3,7 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-light bg-opacity-55 text-gray-dark">
+    <div className="bg-gray-200 bg-opacity-55 text-gray-dark">
       <div className="py-16 px-6">
         <div className="flex justify-around items-center space-y-8 md:space-y-0">
           {/* Logo Section */}
