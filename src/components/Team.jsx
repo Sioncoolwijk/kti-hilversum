@@ -14,7 +14,7 @@ const Team = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative h-[60vh] overflow-hidden"
+          className="relative h-[10vh] overflow-hidden"
         >
           <div className="absolute inset-0">
             <img
@@ -61,7 +61,7 @@ const Team = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <TeamMember
                   key={member.name}
@@ -107,7 +107,7 @@ const TeamMember = ({ member, index }) => (
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-red-600 transition-colors duration-200">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-red-600 transition-colors duration-50">
           {member.name}
         </h3>
         <p className="text-gray-600 mt-1">

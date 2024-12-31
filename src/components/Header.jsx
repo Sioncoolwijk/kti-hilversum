@@ -18,6 +18,24 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Add effect to toggle body scroll
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to ensure scroll is restored when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <motion.div
       initial={{ y: 0 }}
@@ -86,7 +104,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <motion.button
           whileTap={{ scale: 0.9 }}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={toggleMenu}
           className="md:hidden text-2xl text-gray-700 hover:text-red-600 transition-colors"
         >
           {menuOpen ? <IoClose /> : <RxHamburgerMenu />}
@@ -100,7 +118,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 shadow-lg"
+            className="md:hidden bg-white border-t border-gray-100 shadow-lg overflow-y-auto max-h-[calc(100vh-80px)]"
           >
             <div className="max-w-7xl mx-auto py-4 px-6 space-y-6">
               {navigation.map((item) => (
